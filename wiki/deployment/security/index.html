@@ -24,7 +24,7 @@ operating system is a highly effective way to protect your servers.</p>
 <p><strong>Advantages</strong>:</p>
 <ul>
 <li>Fool-proof if you do not give untrusted servers access to your servers</li>
-<li>Does not require extra configuration on each Minecraft server</li>
+<li>Does not require any extra Minecraft server configuration</li>
 <li>Part of good system hardening advice for any operating system</li>
 </ul>
 <p><strong>Disadvantages</strong>:</p>
@@ -62,13 +62,14 @@ the server.</p>
 <code class="language-text">127.0.0.1:&lt;port&gt;</code>.</p>
 <p><strong>Advantages</strong>:</p>
 <ul>
-<li>Relatively trivial setup compared to other methods discussed</li>
-<li>Fool-proof if you do not give untrusted servers access to your servers</li>
+<li>A relatively trivial setup compared to other methods discussed</li>
+<li>Fool-proof if you do not give untrusted users access to your server</li>
 </ul>
 <p><strong>Disadvantages</strong>:</p>
 <ul>
-<li>Setup must be reversed (and an alternate method used) if you move the servers to a
-different physical server</li>
+<li>Setup must be reversed (and an alternate method used) if you move any of the
+servers to a different physical server (such that the proxy and the server
+are not on the same physical server)</li>
 <li>Not viable on a shared host</li>
 </ul>
 <h2>Using an Encrypted Tunnel</h2>
@@ -107,8 +108,8 @@ node as your proxy is on</li>
 <ul>
 <li>Keep frequent backups of your server</li>
 <li>Set up a firewall on your server</li>
-<li>Run your servers as an unprivileged user (this means no <code class="language-text">sudo</code> or running as <code class="language-text">root</code> for
-Linux users!)</li>
+<li>Run your servers as an unprivileged user (this means no <code class="language-text">sudo</code> access or running as
+<code class="language-text">root</code> for Linux users!)</li>
 <li>Update Velocity, your Minecraft server and server plugins, and your server's operating
 system frequently</li>
 <li>Use strong passwords</li>
