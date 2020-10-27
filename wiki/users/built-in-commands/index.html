@@ -47,7 +47,9 @@
 view all the plugins currently active on the proxy using <code class="language-text">/velocity plugins</code>,
 including the name, authors, and version.</p><h3><code class="language-text">/velocity version</code></h3><p>Displays the version of Velocity running on the proxy.</p><h3><code class="language-text">/velocity reload</code></h3><p>If the user has the <code class="language-text">velocity.command.reload</code> permission, the proxy
 will read and reconfigure itself from the <code class="language-text">velocity.toml</code> on disk. If
-there are problems with parsing the file, no changes will be applied.</p><h2>The /server command</h2><p>If the user has the <code class="language-text">velocity.command.server</code> permission (by default,
+there are problems with parsing the file, no changes will be applied.</p><h3><code class="language-text">/velocity dump</code></h3><p>If the user has the <code class="language-text">velocity.command.plugins</code> permission, they can
+use this command to get an anonymized dump of details on the proxy. This
+can be sent to the Velocity Discord to help us provide support.</p><h2>The /server command</h2><p>If the user has the <code class="language-text">velocity.command.server</code> permission (by default,
 this is granted to all users), players can use this command to view and
 switch to another server.</p><p>Executing just <code class="language-text">/server</code> will send the user the name of the server they
 are currently on, along with options to move to other servers configured
