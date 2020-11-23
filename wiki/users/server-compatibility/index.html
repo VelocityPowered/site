@@ -55,8 +55,10 @@ for Paper, it is relatively well-supported.</p><p>Spigot does not support Veloci
 forwarding.</p><h3>Paper</h3><p>We actively test Velocity with Paper. Velocity works with all versions of Paper from 1.7.10 to
 the latest 1.16.3 version.</p><p>You can use Velocity&#x27;s modern forwarding if you run Paper 1.13.2 or higher. If you use Paper
 1.12.2 or lower, you must use legacy BungeeCord-style forwarding.</p><h3>SpongeVanilla</h3><p>SpongeVanilla is compatible with legacy BungeeCord-style forwarding. Our Sponge support largely
-focuses on Forge compatibility, see below for more information.</p><h2>Modded setups</h2><h3>Fabric</h3><p>Use <a href="https://www.curseforge.com/minecraft/mc-mods/fabricproxy">FabricProxy</a>. FabricProxy supports
-modern Velocity forwarding and legacy BungeeCord forwarding.</p><h3>Minecraft Forge (1.13 and above)</h3><p><strong>Minecraft Forge for Minecraft 1.13+ is not compatible with Velocity</strong> due to changes made in
+focuses on Forge compatibility, see below for more information.</p><h2>Modded setups</h2><h3>Fabric</h3><p>Fabric will simply &quot;work out of the box&quot; with no configuration required. However, we strongly recommend you
+add these mods to your server:</p><ul><li><a href="https://www.curseforge.com/minecraft/mc-mods/crossstitch">CrossStitch</a> intends to improve support for
+certain Minecraft features that are extended by mods, such as custom argument types and more.</li><li><a href="https://www.curseforge.com/minecraft/mc-mods/fabricproxy">FabricProxy</a> enables support for Velocity modern
+forwarding (recommended) or legacy BungeeCord forwarding (not recommended).</li></ul><h3>Minecraft Forge (1.13 and above)</h3><p><strong>Minecraft Forge for Minecraft 1.13+ is not compatible with Velocity</strong> due to changes made in
 the handshake protocol that are difficult for proxies to adapt to. We plan to add support but
 this is not currently a priority.</p><h3>Minecraft Forge (1.7.2-1.12.2)</h3><p>Minecraft Forge for Minecraft 1.7.2-1.12.2 is fully compatible with Velocity, as we make special
 provisions to synchronize client state with each server. However, we <strong>strongly</strong> recommend the
