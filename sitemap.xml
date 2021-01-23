@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://velocitypowered.com/wiki/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/deployment/security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/deployment/tuning/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/api-basics/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/command-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/creating-your-first-plugin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/dependencies/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/event-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/pitfalls/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/developers/task-scheduling/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/misc/credits/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/built-in-commands/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/comparisons-to-other-proxies/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/configuration/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/deploying-velocity/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/faq/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/forwarding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/getting-started/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/migration/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/server-compatibility/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/wiki/users/what-does-velocity-do-for-me/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/downloads/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://velocitypowered.com/sponsors/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
