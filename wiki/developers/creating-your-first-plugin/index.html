@@ -47,7 +47,8 @@
 you learn some basic Java before you continue.</p><h2>Set up your environment</h2><p>You&#x27;re going to need the <a href="https://adoptopenjdk.net">JDK</a> and an IDE. If you don&#x27;t have an IDE, IntelliJ IDEA is recommended.</p><h2>Creating the project in your IDE</h2><ul><li>Open your IDE</li><li>Click <code class="language-text">Create New Project</code> or the equivalent</li><li>Select either <code class="language-text">Gradle</code> or <code class="language-text">Maven</code></li><li>Make sure your <strong>Project JDK</strong> is Java 8 or later</li><li><strong>Finish</strong> the dialog and open the project.</li></ul><p>Now we have created our project, we need configure our build system. </p><h2>I know how to do this. Give me what I need!</h2><h3>Maven repository</h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Name</td><td><code class="language-text">velocity</code></td></tr><tr><td>URL</td><td><code class="language-text">https://nexus.velocitypowered.com/repository/maven-public/</code></td></tr></tbody></table><h3>Dependency</h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Group ID</td><td><code class="language-text">com.velocitypowered</code></td></tr><tr><td>Artifact ID</td><td><code class="language-text">velocity-api</code></td></tr><tr><td>Version</td><td><code class="language-text">1.1.5</code></td></tr></tbody></table><h3>Javadocs</h3><p>Javadocs are available at <a href="https://jd.velocitypowered.com/1.1.0">jd.velocitypowered.com/1.1.0</a>.</p><h2>Set up your build system</h2><p>You will need to setup a build system before you continue. While it is possible to write Velocity plugins without one,
 having a build system will make your life a lot less difficult.</p><p>How to set up a build system is outside the scope of this page, but you can look at your build system&#x27;s documentation
 (<a href="https://docs.gradle.org/current/userguide/userguide.html">Gradle</a> or <a href="https://maven.apache.org/guides/getting-started/index.html">Maven</a>)
-for assistance.</p><h3>Setting up the dependency with Gradle</h3><p>Add the following to your <code class="language-text">build.gradle</code>:</p><div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">repositories {
+for assistance.</p><h3>Setting up the dependency with Gradle</h3><p>Add the following to your <code class="language-text">build.gradle</code>:</p><div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// Gradle DSL
+repositories {
     maven {
         name &#x27;velocity&#x27;
         url &#x27;https://nexus.velocitypowered.com/repository/maven-public/&#x27;
@@ -56,10 +57,49 @@ for assistance.</p><h3>Setting up the dependency with Gradle</h3><p>Add the foll
 
 dependencies {
     compile &#x27;com.velocitypowered:velocity-api:1.1.5&#x27;
+}
+
+// Kotlin DSL
+repositories {
+    maven(&quot;https://nexus.velocitypowered.com/repository/maven-public/&quot;) {
+        name = &quot;velocity&quot;
+    }
+}
+
+dependencies {
+    compileOnly(&quot;com.velocitypowered:velocity-api:1.1.5&quot;)
 }</code></pre></div><p>As of Gradle 5, you must also specify the API dependency as an annotation processor, otherwise plugin annotations
-won&#x27;t be processed to create the <code class="language-text">velocity-plugin.json</code> file.</p><div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">dependencies {
+won&#x27;t be processed to create the <code class="language-text">velocity-plugin.json</code> file.</p><div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// Gradle DSL
+dependencies {
     compile &#x27;com.velocitypowered:velocity-api:1.1.5&#x27;
     annotationProcessor &#x27;com.velocitypowered:velocity-api:1.1.5&#x27;
+}
+
+// Kotlin DSL
+dependencies {
+    compileOnly(&quot;com.velocitypowered:velocity-api:1.1.5&quot;)
+    annotationProcessor(&quot;com.velocitypowered:velocity-api:1.1.5&quot;)
+}
+</code></pre></div><h4>For Kotlin developers</h4><p>If you are writing your plugin in Kotlin, you also need the <code class="language-text">kapt</code> plugin and you&#x27;ll also need to replace <code class="language-text">annotationProcessor</code> with <code class="language-text">kapt</code>:</p><div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// Gradle DSL
+plugins {
+    id &#x27;org.jetbrains.kotlin.jvm&#x27; version &#x27;your-kotlin-version&#x27;
+    id &#x27;org.jetbrains.kotlin.kapt&#x27; version &#x27;your-kotlin-version&#x27;
+}
+
+dependencies {
+    compile &#x27;com.velocitypowered:velocity-api:1.1.5&#x27;
+    kapt &#x27;com.velocitypowered:velocity-api:1.1.5&#x27;
+}
+
+// Kotlin DSL
+plugins {
+    kotlin(&quot;jvm&quot;) version &quot;your-kotlin-version&quot;
+    kotlin(&quot;kapt&quot;) version &quot;your-kotlin-version&quot;
+}
+
+dependencies {
+    compileOnly(&quot;com.velocitypowered:velocity-api:1.1.5&quot;)
+    kapt(&quot;com.velocitypowered:velocity-api:1.1.5&quot;)
 }</code></pre></div><h3>Setting up the dependency with Maven</h3><p>Add the following to your <code class="language-text">pom.xml</code>:</p><div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>velocity<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
